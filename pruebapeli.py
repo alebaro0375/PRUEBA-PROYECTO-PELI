@@ -16,10 +16,10 @@ class Pelicula:
             raise ValueError("El nombre no puede estar vacío")
 
     def __str__(self):
-        return f"{self.__nombre} Dirigida por: {self.director} Género: {self.genero}"
+        return f"Película: {self.__nombre} Dirigida por: {self.director} Género: {self.genero}"
     
 import os
-ruta_archivo = "ADA_TRABAJOS/PRUEBA PROYECTO PELI/catapeli.py"
+
 
 class CatalogoPelicula:
     def __init__(self, nombre):
@@ -62,6 +62,7 @@ class CatalogoPelicula:
         except FileNotFoundError:
             print(f"El catálogo '{self.nombre}' no existe.")
             
+            
 def mostrar_menu():
     print("\nSelecciona una opción:")
     print("1. Agregar una película")
@@ -94,4 +95,6 @@ def main():
             print("La opción no es válida. Intentalo nuevamente.")
 
 if __name__ == "__main__":
-    main()              
+    main()     
+    
+           
